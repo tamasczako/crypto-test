@@ -1,0 +1,16 @@
+.card-container {
+  width: 500px;
+  padding: 16px;
+  display: flex;
+  align-items: center;
+
+  .chain-form {
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+  }
+
+  .chain-full-width {
+    width: 100%;
+  }
+}
