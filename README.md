@@ -1,5 +1,7 @@
 # CryptoTest
 
+The newest version is on the main branch, please clone the project from it.
+
 Before you run it with `ng serve` you have to install the necessary packages with `npm install`.
 
 ## Development server
