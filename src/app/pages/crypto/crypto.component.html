@@ -1,0 +1,23 @@
+<mat-card class="card-container">
+    <form class="chain-form" [formGroup]="cryptoForm" (ngSubmit)="submit()">
+        <mat-form-field>
+            <mat-label>Chain</mat-label>
+            <input type="text" placeholder="Pick one" matInput formControlName="chainControl" [matAutocomplete]="auto">
+            <mat-autocomplete autoActiveFirstOption #auto="matAutocomplete" [displayWith]="displayFn">
+                <mat-option *ngFor="let chain of filteredChains" [value]="chain">
+                    {{chain.name}}
+                </mat-option>
+            </mat-autocomplete>
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Recipient Address</mat-label>
+            <input type="text" placeholder="Pick one" matInput formControlName="recipientAddressControl">
+        </mat-form-field>
+        <mat-form-field>
+            <mat-label>Amount</mat-label>
+            <input type="number" placeholder="Pick one" matInput formControlName="amountControl">
+        </mat-form-field>
+
+        <button mat-button color="primary" type="submit" [disabled]="cryptoForm.invalid">Send</button>
+    </form>
+</mat-card>
